@@ -1,0 +1,413 @@
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+.header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #e74c3c;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    padding: 0 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #e74c3c;
+}
+
+
+.intro {
+    background-image: url('mainpict.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Responsive max-width */
+    margin: 0 auto; 
+}
+
+.intro h1 {
+    font-size: 4rem; /* Responsive font size */
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.5rem; /* Responsive font size */
+    margin-bottom: 25px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.menu-panel {
+    color : black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.menu-panel h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.menu-panel p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #c0392b;
+}
+
+.menu-content {
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-content h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    background-color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.menu-content p {
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+
+.dish {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
+    max-width: 300px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+}
+
+.dish img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.dish-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.dish h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dish-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.dish-price {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #c0392b;
+}
+
+
+.noodles-gif {
+    width: 24px; /* Adjust the width to match the logo's font-size */
+    height: 24px; /* Adjust the height to match the logo's font-size */
+    margin-left: 10px;
+    display: inline-block;
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Hide any content outside the circle */
+    cursor: pointer; /* Show pointer cursor when clickable */
+}
+
+.noodles-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bounce animation for the noodles-gif */
+@keyframes bounceAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.noodles-gif.bounce {
+    animation: bounceAnimation 0.5s;
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.zoom {
+    display: inline-block;
+    animation: zoomIn 2s infinite alternate; /* Adjust the duration and animation behavior as needed */
+}
+
+/* Falling animation for move-letter */
+@keyframes falling {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.move-letter {
+    display: inline-block;
+    opacity: 0; /* Initially hidden */
+    animation: falling 0.5s ease-in-out forwards; /* Adjust the animation duration as needed */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.intro-text {
+    animation: slideInFromLeft 1.5s ease-in-out; /* Adjust the animation duration as needed */
+}
+
+
+/* Footer */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adjust the padding as needed */
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Your existing CSS styles */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+.reservation-form-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body::before {
+    content: "";
+    background: url('ss1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0; /* Make it invisible */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+/* Adjust the positioning of the reservation image */
+/* Adjust the positioning of the reservation image */
+.reservation-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px; /* Adjust the distance from the reservation form */
+    margin-bottom: 50px; /* Adjust the distance from the footer */
+}
+
+.reservation-gif img {
+    max-height: 300px; /* Adjust the maximum height of the image */
+    width: auto;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 0px; /* Adjust the space between the image and form/footer */
+}
+
+.reservation-gif img:hover {
+    transform: scale(1.05);
+}
+
+
+.google-location-container {
+    flex: 4;
+    width: 100%; /* Use a percentage value to adapt to screen width */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Styles for smartphones and smaller tablets */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for larger tablets */
+}
+
+@media (min-width: 1025px) {
+    /* Styles for desktops */
+}
